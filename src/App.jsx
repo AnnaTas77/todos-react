@@ -1,3 +1,6 @@
+import TodoForm from "./components/TodoForm.jsx";
+import TodoList from "./components/TodoList.jsx";
+
 function App() {
   const todos = [
     { id: "todo-rDOsl4VDHRSt_o2xLSnkb", text: "walk the dogs", done: true },
@@ -8,32 +11,8 @@ function App() {
   return (
     <>
       <h1>Todos</h1>
-
-      <form className="TodoForm">
-        <p>
-          <label htmlFor="todo-input">Todo</label>
-          <input id="todo-input" type="text" />
-        </p>
-        <p>
-          <button type="submit">Add Todo</button>
-        </p>
-      </form>
-
-      <ul className="TodoList">
-        {todos.map((todo) => (
-          <li className="Todo" key={todo.id}>
-            <label htmlFor={`todo-${todo.id}`}>
-              <input
-                id={`todo-${todo.id}`}
-                type="checkbox"
-                checked={todo.done}
-                readOnly={true} // remove once we add state
-              />
-              <span>{todo.text}</span>
-            </label>
-          </li>
-        ))}
-      </ul>
+      <TodoForm />
+      <TodoList todos={todos} />
     </>
   );
 }
