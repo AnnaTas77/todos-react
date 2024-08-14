@@ -1,16 +1,14 @@
-import React from "react";
-
 function Todo(props) {
   return (
     <li className="Todo">
-      <label htmlFor={`todo-${props.todo.id}`}>
+      <label htmlFor={`todo-${props.id}`}>
         <input
-          id={`todo-${props.todo.id}`}
+          id={`todo-${props.id}`}
           type="checkbox"
-          checked={props.todo.done}
+          checked={props.done}
           readOnly={true} // remove once we add state
         />
-        <span>{props.todo.text}</span>
+        <span>{props.text}</span>
       </label>
     </li>
   );

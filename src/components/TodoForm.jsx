@@ -1,7 +1,4 @@
-import React from "react";
-// const React = require("react");
-
-function TodoForm(props) {
+function TodoForm() {
   return (
     <form className="TodoForm">
       <p>
@@ -16,4 +13,3 @@ function TodoForm(props) {
 }
 
 export default TodoForm;
-// module.exports = TodoForm;
