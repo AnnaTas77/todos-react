@@ -16,15 +16,18 @@ body {
 }
 
 label,
-input:not([type="checkbox"]) {
+input:not([type="checkbox"]),
+textarea {
   display: block;
 }
 
-input:not([type="checkbox"]) {
+input:not([type="checkbox"]),
+textarea {
   width: 100%;
 }
 
 input,
+textarea,
 button {
   font: inherit;
 }

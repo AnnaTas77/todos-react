@@ -6,7 +6,7 @@ function Todo(props) {
           id={`todo-${props.id}`}
           type="checkbox"
           checked={props.done}
-          readOnly={true} // remove once we add state
+          onChange={() => props.onChange(props.id)}
         />
         <span>{props.text}</span>
       </label>
